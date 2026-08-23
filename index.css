@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background-color: #fafbfd;
+  color: #172033;
+  font-family: 'Nunito', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Accessibility text scaling driven by data-textsize on <html> */
+html[data-textsize='large'] {
+  font-size: 18px;
+}
+html[data-textsize='xlarge'] {
+  font-size: 21px;
+}
+
+/* Smooth, calm focus rings */
+*:focus-visible {
+  outline: 3px solid #1e5eff;
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+
+button {
+  font-family: inherit;
+}
+
+/* Hide scrollbar utility for horizontal role pills */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
